@@ -35,6 +35,11 @@ const Menu = () => {
 									<ShoppingCart /> Card
 								</Link>
 							</Button>
+							<Button asChild>
+								<Link href="/sing-in">
+									<UserIcon /> Sing In
+								</Link>
+							</Button>
 							<SheetDescription></SheetDescription>
 						</SheetContent>
 					</Sheet>
