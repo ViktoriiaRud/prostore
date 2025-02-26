@@ -1,9 +1,10 @@
-import { Button } from "@/components/ui/button";
+import ProductList from "@/components/shared/product/product-list";
+import sampleData from "@/db/simple-data";
 
 const Homepage = () => {
 	return (
 		<>
-			<Button>Click me!</Button>
+			<ProductList data={sampleData.products} title="Newest Arrivals" limit={4} />
 		</>
 	);
 };
