@@ -1,6 +1,7 @@
 const sampleData = {
     products: [
         {
+            id: "polo",
             name: "Polo Sporting Stretch Shirt",
             slug: "polo-sporting-stretch-shirt",
             category: "Men's Dress Shirt",
@@ -18,6 +19,7 @@ const sampleData = {
             banner: "banner-1.jpg",
         },
         {
+            id: "polo-loc",
             name: "Polo Sporting Stretch Shirt",
             slug: "polo-sporting-stretch-shirt",
             category: "Men's Dress Shirt",
@@ -35,6 +37,7 @@ const sampleData = {
             banner: "banner-5.jpg",
         },
         {
+            id: "polo-lopfr",
             name: "Polo Sporting Stretch Shirt",
             slug: "polo-sporting-stretch-shirt",
             category: "Men's Dress Shirt",
@@ -52,6 +55,7 @@ const sampleData = {
             banner: "banner-2.jpg",
         },
         {
+            id: "polo-pfr",
             name: "Polo Sporting Stretch Shirt",
             slug: "polo-sporting-stretch-shirt",
             category: "Men's Dress Shirt",
@@ -69,6 +73,7 @@ const sampleData = {
             banner: "banner-1.jpg",
         },
         {
+            id: "polo-yes",
             name: "Polo Sporting Stretch Shirt",
             slug: "polo-sporting-stretch-shirt",
             category: "Men's Dress Shirt",
@@ -86,6 +91,7 @@ const sampleData = {
             banner: "banner-3.jpg",
         },
         {
+            id: "polo-topic",
             name: "Polo Sporting Stretch Shirt",
             slug: "polo-sporting-stretch-shirt",
             category: "Men's Dress Shirt",
@@ -103,6 +109,7 @@ const sampleData = {
             banner: "banner-4.jpg",
         },
         {
+            id: "polo-zoro",
             name: "Polo Sporting Stretch Shirt",
             slug: "polo-sporting-stretch-shirt",
             category: "Men's Dress Shirt",
@@ -120,6 +127,7 @@ const sampleData = {
             banner: "banner-5.jpg",
         },
         {
+            id: "polo-laci",
             name: "Polo Sporting Stretch Shirt",
             slug: "polo-sporting-stretch-shirt",
             category: "Men's Dress Shirt",
@@ -137,6 +145,7 @@ const sampleData = {
             banner: "banner-4.jpg",
         },
         {
+            id: "polo-lr",
             name: "Polo Sporting Stretch Shirt",
             slug: "polo-sporting-stretch-shirt",
             category: "Men's Dress Shirt",
@@ -154,6 +163,7 @@ const sampleData = {
             banner: "banner-3.jpg",
         },
         {
+            id: "polo-lopfrklog",
             name: "Polo Sporting Stretch Shirt",
             slug: "polo-sporting-stretch-shirt",
             category: "Men's Dress Shirt",
@@ -171,6 +181,7 @@ const sampleData = {
             banner: "banner-2.jpg",
         },
         {
+            id: "polo-lopfpfdsr",
             name: "Polo Sporting Stretch Shirt",
             slug: "polo-sporting-stretch-shirt",
             category: "Men's Dress Shirt",
@@ -188,6 +199,7 @@ const sampleData = {
             banner: "banner-2.jpg",
         },
         {
+            id: "polo-loplllkfr",
             name: "Polo Sporting Stretch Shirt",
             slug: "polo-sporting-stretch-shirt",
             category: "Men's Dress Shirt",
