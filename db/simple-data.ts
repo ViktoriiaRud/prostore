@@ -70,7 +70,7 @@ const sampleData = {
         },
         {
             name: "Polo Sporting Stretch Shirt green",
-            slug: "polo-sporting-stretch-shirt-green",
+            slug: "polo-sporting-stretch-shirt-green123",
             category: "Men's Dress Shirt",
             description: "Classic Polo style with modern comfort",
             images: [
@@ -172,7 +172,7 @@ const sampleData = {
         },
         {
             name: "Polo Sporting Stretch Shirt yellow",
-            slug: "polo-sporting-stretch-shirt-yellow",
+            slug: "polo-sporting-stretch-shirt-yellow2",
             category: "Men's Dress Shirt",
             description: "Classic Polo style with modern comfort",
             images: [
