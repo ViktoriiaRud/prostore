@@ -1,32 +1,30 @@
 const sampleData = {
     products: [
         {
-            id: "polo",
-            name: "Polo Sporting Stretch Shirt",
-            slug: "polo-sporting-stretch-shirt",
+            name: "Polo Sporting Stretch Shirt Tomato",
+            slug: "polo-sporting-stretch-shirt-tomato",
             category: "Men's Dress Shirt",
             description: "Classic Polo style with modern comfort",
             images: [
                 "/images/sample-products/p1-1.png",
                 "/images/sample-products/p1-1.png",
             ],
-            price: "59.99",
+            price: "49.99",
             brand: "Polo",
-            rating: "4.5",
+            rating: "4.6",
             numReviews: 10,
             stock: 10,
             isFeatured: true,
             banner: "banner-1.jpg",
         },
         {
-            id: "polo-loc",
-            name: "Polo Sporting Stretch Shirt",
-            slug: "polo-sporting-stretch-shirt",
+            name: "Polo Sporting Stretch Shirt Red",
+            slug: "polo-sporting-stretch-shirt-red",
             category: "Men's Dress Shirt",
             description: "Classic Polo style with modern comfort",
             images: [
-                "/images/sample-products/p1-2.png",
-                "/images/sample-products/p1-2.png",
+                "/images/sample-products/p1-3.png",
+                "/images/sample-products/p1-4.png",
             ],
             price: "59.99",
             brand: "Polo",
@@ -37,16 +35,15 @@ const sampleData = {
             banner: "banner-5.jpg",
         },
         {
-            id: "polo-lopfr",
-            name: "Polo Sporting Stretch Shirt",
-            slug: "polo-sporting-stretch-shirt",
-            category: "Men's Dress Shirt",
+            name: "Polo Sporting Stretch Shirt Blue",
+            slug: "polo-sporting-stretch-shirt-blue",
+            category: "Men's Dress Shirt Blue",
             description: "Classic Polo style with modern comfort",
             images: [
                 "/images/sample-products/p1-1.png",
                 "/images/sample-products/p1-1.png",
             ],
-            price: "59.99",
+            price: "89.99",
             brand: "Polo",
             rating: "4.5",
             numReviews: 10,
@@ -55,9 +52,8 @@ const sampleData = {
             banner: "banner-2.jpg",
         },
         {
-            id: "polo-pfr",
-            name: "Polo Sporting Stretch Shirt",
-            slug: "polo-sporting-stretch-shirt",
+            name: "Polo Sporting Stretch Shirt green blue",
+            slug: "polo-sporting-stretch-shirt-green-blue",
             category: "Men's Dress Shirt",
             description: "Classic Polo style with modern comfort",
             images: [
@@ -73,9 +69,8 @@ const sampleData = {
             banner: "banner-1.jpg",
         },
         {
-            id: "polo-yes",
-            name: "Polo Sporting Stretch Shirt",
-            slug: "polo-sporting-stretch-shirt",
+            name: "Polo Sporting Stretch Shirt green",
+            slug: "polo-sporting-stretch-shirt-green",
             category: "Men's Dress Shirt",
             description: "Classic Polo style with modern comfort",
             images: [
@@ -91,9 +86,8 @@ const sampleData = {
             banner: "banner-3.jpg",
         },
         {
-            id: "polo-topic",
-            name: "Polo Sporting Stretch Shirt",
-            slug: "polo-sporting-stretch-shirt",
+            name: "Polo Sporting Stretch Shirt dark",
+            slug: "polo-sporting-stretch-shirt-dark",
             category: "Men's Dress Shirt",
             description: "Classic Polo style with modern comfort",
             images: [
@@ -109,9 +103,8 @@ const sampleData = {
             banner: "banner-4.jpg",
         },
         {
-            id: "polo-zoro",
-            name: "Polo Sporting Stretch Shirt",
-            slug: "polo-sporting-stretch-shirt",
+            name: "Polo Sporting Stretch Shirt red dark",
+            slug: "polo-sporting-stretch-shirt-red-dark",
             category: "Men's Dress Shirt",
             description: "Classic Polo style with modern comfort",
             images: [
@@ -127,9 +120,8 @@ const sampleData = {
             banner: "banner-5.jpg",
         },
         {
-            id: "polo-laci",
-            name: "Polo Sporting Stretch Shirt",
-            slug: "polo-sporting-stretch-shirt",
+            name: "Polo Sporting Stretch Shirt green dark",
+            slug: "polo-sporting-stretch-shirt-green-dark",
             category: "Men's Dress Shirt",
             description: "Classic Polo style with modern comfort",
             images: [
@@ -145,9 +137,8 @@ const sampleData = {
             banner: "banner-4.jpg",
         },
         {
-            id: "polo-lr",
-            name: "Polo Sporting Stretch Shirt",
-            slug: "polo-sporting-stretch-shirt",
+            name: "Polo Sporting Stretch Shirt Green",
+            slug: "polo-sporting-stretch-shirt-green",
             category: "Men's Dress Shirt",
             description: "Classic Polo style with modern comfort",
             images: [
@@ -163,9 +154,8 @@ const sampleData = {
             banner: "banner-3.jpg",
         },
         {
-            id: "polo-lopfrklog",
-            name: "Polo Sporting Stretch Shirt",
-            slug: "polo-sporting-stretch-shirt",
+            name: "Polo Sporting Stretch Shirt yellow dark",
+            slug: "polo-sporting-stretch-shirt-yellow-dark",
             category: "Men's Dress Shirt",
             description: "Classic Polo style with modern comfort",
             images: [
@@ -181,9 +171,8 @@ const sampleData = {
             banner: "banner-2.jpg",
         },
         {
-            id: "polo-lopfpfdsr",
-            name: "Polo Sporting Stretch Shirt",
-            slug: "polo-sporting-stretch-shirt",
+            name: "Polo Sporting Stretch Shirt yellow",
+            slug: "polo-sporting-stretch-shirt-yellow",
             category: "Men's Dress Shirt",
             description: "Classic Polo style with modern comfort",
             images: [
@@ -199,20 +188,19 @@ const sampleData = {
             banner: "banner-2.jpg",
         },
         {
-            id: "polo-loplllkfr",
-            name: "Polo Sporting Stretch Shirt",
-            slug: "polo-sporting-stretch-shirt",
+            name: "Polo Sporting Stretch Shirt Pink",
+            slug: "polo-sporting-stretch-shirt-pink",
             category: "Men's Dress Shirt",
             description: "Classic Polo style with modern comfort",
             images: [
                 "/images/sample-products/p1-2.png",
                 "/images/sample-products/p1-1.png",
             ],
-            price: "59.99",
+            price: "99.99",
             brand: "Polo",
-            rating: "4.5",
+            rating: "4.2",
             numReviews: 10,
-            stock: 5,
+            stock: 45,
             isFeatured: true,
             banner: "banner-2.jpg",
         }
