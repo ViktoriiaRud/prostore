@@ -1,5 +1,5 @@
 import { PrismaClient } from "@prisma/client";
-import sampleData from "./simple-data";
+import sampleData from "./sample-data";
 
 
 async function main() {

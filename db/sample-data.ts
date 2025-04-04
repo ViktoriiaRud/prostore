@@ -23,8 +23,8 @@ const sampleData = {
             category: "Men's Dress Shirt",
             description: "Classic Polo style with modern comfort",
             images: [
-                "/images/sample-products/p1-3.png",
-                "/images/sample-products/p1-4.png",
+                "/images/sample-products/p1-1.png",
+                "/images/sample-products/p1-1.png",
             ],
             price: "59.99",
             brand: "Polo",
@@ -57,8 +57,8 @@ const sampleData = {
             category: "Men's Dress Shirt",
             description: "Classic Polo style with modern comfort",
             images: [
-                "/images/sample-products/p1-2.png",
-                "/images/sample-products/p1-2.png",
+                "/images/sample-products/p1-1.png",
+                "/images/sample-products/p1-1.png",
             ],
             price: "59.99",
             brand: "Polo",
@@ -91,8 +91,8 @@ const sampleData = {
             category: "Men's Dress Shirt",
             description: "Classic Polo style with modern comfort",
             images: [
-                "/images/sample-products/p1-2.png",
-                "/images/sample-products/p1-2.png",
+                "/images/sample-products/p1-1.png",
+                "/images/sample-products/p1-1.png",
             ],
             price: "59.99",
             brand: "Polo",
@@ -125,8 +125,8 @@ const sampleData = {
             category: "Men's Dress Shirt",
             description: "Classic Polo style with modern comfort",
             images: [
-                "/images/sample-products/p1-2.png",
-                "/images/sample-products/p1-2.png",
+                "/images/sample-products/p1-1.png",
+                "/images/sample-products/p1-1.png",
             ],
             price: "59.99",
             brand: "Polo",
@@ -159,7 +159,7 @@ const sampleData = {
             category: "Men's Dress Shirt",
             description: "Classic Polo style with modern comfort",
             images: [
-                "/images/sample-products/p1-2.png",
+                "/images/sample-products/p1-1.png",
                 "/images/sample-products/p1-1.png",
             ],
             price: "59.99",
@@ -170,40 +170,6 @@ const sampleData = {
             isFeatured: true,
             banner: "banner-2.jpg",
         },
-        {
-            name: "Polo Sporting Stretch Shirt yellow",
-            slug: "polo-sporting-stretch-shirt-yellow2",
-            category: "Men's Dress Shirt",
-            description: "Classic Polo style with modern comfort",
-            images: [
-                "/images/sample-products/p1-2.png",
-                "/images/sample-products/p1-1.png",
-            ],
-            price: "59.99",
-            brand: "Polo",
-            rating: "4.5",
-            numReviews: 10,
-            stock: 5,
-            isFeatured: true,
-            banner: "banner-2.jpg",
-        },
-        {
-            name: "Polo Sporting Stretch Shirt Pink",
-            slug: "polo-sporting-stretch-shirt-pink",
-            category: "Men's Dress Shirt",
-            description: "Classic Polo style with modern comfort",
-            images: [
-                "/images/sample-products/p1-2.png",
-                "/images/sample-products/p1-1.png",
-            ],
-            price: "99.99",
-            brand: "Polo",
-            rating: "4.2",
-            numReviews: 10,
-            stock: 45,
-            isFeatured: true,
-            banner: "banner-2.jpg",
-        }
     ]
 }
 
