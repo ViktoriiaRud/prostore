@@ -2,11 +2,9 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
-```bash
 npm run dev
-
 
 
 ## Deploy on Vercel
 
-[Vercel](https://prostore-nu-plum.vercel.app)
+[Prostore](https://prostore-nu-plum.vercel.app)
