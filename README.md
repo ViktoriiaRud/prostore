@@ -2,8 +2,10 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
-```bash
+`bash
 npm run dev
+
+
 
 ## Deploy on Vercel
 
