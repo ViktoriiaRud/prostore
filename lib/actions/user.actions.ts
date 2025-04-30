@@ -1,0 +1,34 @@
+'use server';
+
+import { signIn, signOut } from "@/auth";
+import { isRedirectError } from "next/dist/client/components/redirect-error";
+import { signInFormSchema } from "../validators";
+
+
+// Sign in the user with credentials
+export async function signInWithCredentials(
+    prevState: unknown,
+    formData: FormData
+) {
+    try {
+        const user = signInFormSchema.parse({
+            email: FormData.get('email'),
+            password: FormData.get('password'),
+        });
+
+        await signIn('credentials', user);
+
+        return { success: true, massage: 'Signed in successfully' }
+    } catch (error) {
+        if (isRedirectError(error)) {
+            throw error;
+        }
+
+        return { success: false, massage: 'Invalid email or password' }
+    }
+}
+
+// Sign user out
+export async function signOutUser() {
+    await signOut();
+}
