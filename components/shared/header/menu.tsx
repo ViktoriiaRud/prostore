@@ -17,8 +17,8 @@ const Menu = () => {
 						</Link>
 					</Button>
 					<Button asChild>
-						<Link href="/sing-in">
-							<UserIcon /> Sing In
+						<Link href="/sign-in">
+							<UserIcon /> Sign In
 						</Link>
 					</Button>
 				</nav>
@@ -36,8 +36,8 @@ const Menu = () => {
 								</Link>
 							</Button>
 							<Button asChild>
-								<Link href="/sing-in">
-									<UserIcon /> Sing In
+								<Link href="/sign-in">
+									<UserIcon /> Sign In
 								</Link>
 							</Button>
 							<SheetDescription></SheetDescription>
