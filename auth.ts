@@ -47,7 +47,7 @@ export const config = {
                 }
                 //   If user does not exist or password does not match return null
                 return null;
-            }
+            },
         })
     ],
     callbacks: {
@@ -59,9 +59,9 @@ export const config = {
             if (trigger === 'update') {
                 session.user.name = user.name;
             }
-            return session
+            return session;
         },
-    }
+    },
 } satisfies NextAuthConfig;
 
 export const { handlers, auth, signIn, signOut } = NextAuth(config);
