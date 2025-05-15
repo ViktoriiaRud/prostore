@@ -18,8 +18,8 @@ export const config = {
     providers: [
         CredentialsProvider({
             credentials: {
-                email: { type: "email" },
-                password: { type: "password" }
+                email: { type: "text", label: "Email" },
+                password: { type: "password", label: "Password" }
             },
             async authorize(credentials) {
                 if (credentials == null) return null;
