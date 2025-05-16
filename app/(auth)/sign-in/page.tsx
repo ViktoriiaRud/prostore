@@ -11,29 +11,20 @@ export const metadata: Metadata = {
     title: 'Sign in',
 }
 
-type SignInPageProps = {
-    searchParams?: {
-        callbackUrl?: string;
-        error?: string;
-    }
-}
+const SignInPage = async (props: {
+    searchParams: Promise<{
+        callbackUrl: string
+    }>
+}) => {
+    const { callbackUrl } = await props.searchParams;
+     const session = await auth();
 
-const SignInPage = async ({ searchParams }: SignInPageProps) => {
-    const callbackUrl = searchParams?.callbackUrl &&
-        searchParams.callbackUrl.startsWith('/') ?
-        searchParams.callbackUrl : '/';
-
-    try {
-        const session = await auth();
         if (session) {
-            return redirect(callbackUrl);
+            return redirect(callbackUrl || '/');
         }
-    } catch (error) {
-        console.error("Authentication error:", error);
-    }
 
     return (<>
-        <div className="flex-center min-h-screen w-full max-w-md mx-auto">
+        <div className="w-full max-w-md mx-auto">
             <Card>
                 <CardHeader className='space-y-4'>
                     <Link href='/' className='flex-center'>
@@ -52,13 +43,6 @@ const SignInPage = async ({ searchParams }: SignInPageProps) => {
                 </CardHeader>
                 <CardContent className='space-y-4'>
                     <CredentialsSigninForm />
-                    {searchParams?.error && (
-                        <p className="text-sm text-red-500 text-center">
-                            {searchParams.error === "Configuration"
-                                ? "There was an error with the sign-in configuration."
-                                : "Authentication failed. Please try again."}
-                        </p>
-                    )}
                 </CardContent>
             </Card>
         </div>
