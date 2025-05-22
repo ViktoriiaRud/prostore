@@ -18,7 +18,7 @@ const UserButton = async () => {
 		);
 	}
 
-	const firstInitial = session.user?.name?.charAt(0).toLocaleUpperCase() ?? "U";
+	const firstInitial = session.user?.name?.charAt(0).toUpperCase() ?? "U";
 
 	return (
 		<div className="flex gap-2 items-center">
@@ -36,8 +36,8 @@ const UserButton = async () => {
 				<DropdownMenuContent className="w-56" align="end" forceMount>
 					<DropdownMenuLabel className="font-normal">
 						<div className="flex flex-col space-y-1">
-							<div className="text-sm font-medium leading-none">{session.user?.email}</div>
-							<div className="text-sm font-medium leading-none">{session.user?.email}</div>
+							<div className="text-sm font-medium leading-none">{session.user?.name}</div>
+							<div className="text-sm text-muted-foreground leading-none">{session.user?.email}</div>
 						</div>
 					</DropdownMenuLabel>
 					<DropdownMenuItem className="p-0 md-1">
