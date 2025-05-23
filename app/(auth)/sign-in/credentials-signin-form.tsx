@@ -10,11 +10,14 @@ import { useSearchParams } from "next/navigation";
 import { useActionState } from 'react';
 import { useFormStatus } from "react-dom";
 
+
+const initialState = {
+  success: false,
+  message: ''
+};
+
 const CredentialsSignInForm = () => {
-    const [data, action] = useActionState(signInWithCredentials, {
-        success: false,
-        massage: ''
-    });
+    const [data, action] = useActionState(signInWithCredentials, initialState);
 
      const searchParams = useSearchParams();
      const callbackUrl = searchParams.get('callbackUrl') || '/';
@@ -38,7 +41,7 @@ const CredentialsSignInForm = () => {
                     <Input
                         id="email"
                         name="email"
-                        type="email"
+                        type="text"
                         required
                         autoComplete="email"
                         defaultValue={signInDefaultValues.email}
@@ -61,7 +64,7 @@ const CredentialsSignInForm = () => {
 
                 {data && !data.success && (
                     <div className="text-center text-destructive">
-                        { data.massage }
+                        { data.message }
                     </div>
                 )}
 
