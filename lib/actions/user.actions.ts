@@ -21,13 +21,13 @@ export async function signInWithCredentials(
 
         await signIn('credentials', user);
 
-        return { success: true, massage: 'Signed in successfully' }
+        return { success: true, message: 'Signed in successfully' }
     } catch (error) {
         if (isRedirectError(error)) {
             throw error;
         }
 
-        return { success: false, massage: 'Invalid email or password' }
+        return { success: false, message: 'Invalid email or password' }
     }
 }
 
@@ -68,6 +68,6 @@ export async function signUpUser(prevState: unknown, formData: FormData) {
             if (isRedirectError(error)) {
             throw error;
         }
-        return { success: false, massage: formatError(error) };
+        return { success: false, message: formatError(error) };
   }
 }

@@ -10,11 +10,13 @@ import { useSearchParams } from "next/navigation";
 import { useActionState } from 'react';
 import { useFormStatus } from "react-dom";
 
+const initialState = {
+  success: false,
+  message: ''
+};
+
 const SignUpForm = () => {
-    const [data, action] = useActionState(signUpUser, {
-        success: false,
-        massage: ''
-    });
+    const [data, action] = useActionState(signUpUser, initialState);
 
      const searchParams = useSearchParams();
      const callbackUrl = searchParams.get('callbackUrl') || '/';
@@ -38,7 +40,7 @@ const SignUpForm = () => {
                     <Input
                         id="name"
                         name="name"
-                        type="name"
+                        type="text"
                         required
                         autoComplete="name"
                         defaultValue={signUpDefaultValues.name}
@@ -82,7 +84,7 @@ const SignUpForm = () => {
 
                 {data && !data.success && (
                     <div className="text-center text-destructive">
-                        { data.massage }
+                        { data.message }
                     </div>
                 )}
 
