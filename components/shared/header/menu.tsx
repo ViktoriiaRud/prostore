@@ -12,8 +12,8 @@ const Menu = () => {
 				<nav className="hidden md:flex w-full max-w-xs gap-1">
 					<ModeToggle />
 					<Button asChild variant="ghost">
-						<Link href="/card">
-							<ShoppingCart /> Card
+						<Link href="/cart">
+							<ShoppingCart /> Cart
 						</Link>
 					</Button>
 					<UserButton />
@@ -27,8 +27,8 @@ const Menu = () => {
 							<SheetTitle>Menu</SheetTitle>
 							<ModeToggle />
 							<Button asChild variant="ghost">
-								<Link href="/card">
-									<ShoppingCart /> Card
+								<Link href="/cart">
+									<ShoppingCart /> Cart
 								</Link>
 							</Button>
 							<UserButton />

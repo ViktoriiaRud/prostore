@@ -5,6 +5,7 @@ import type { NextAuthConfig } from "next-auth";
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import { NextResponse } from "next/server";
+// import { cookies } from "next/headers";
 
 export const config = {
 	pages: {

@@ -8,7 +8,7 @@ import { Plus } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { addItemToCart } from "./cart.actions";
 
-const AddToCard = ({ item }: { item: CartItem }) => {
+const AddToCart = ({ item }: { item: CartItem }) => {
 	const router = useRouter();
 	const { toast } = useToast();
 
@@ -18,7 +18,7 @@ const AddToCard = ({ item }: { item: CartItem }) => {
 		if (!res.success) {
 			toast({
 				variant: "destructive",
-				description: res.message,
+				description: res.message || "Something went wrong",
 			});
 			return;
 		}
@@ -29,19 +29,18 @@ const AddToCard = ({ item }: { item: CartItem }) => {
 			action: (
 				<ToastAction
 					className="bg-primary text-white hover:bg-gray-800"
-					altText="Go To 
-                Cart"
+					altText="Go To Cart"
 					onClick={() => router.push("/cart")}>
-					<Plus /> Go To Cart
+					 Go To Cart
 				</ToastAction>
 			),
 		});
 	};
 	return (
 		<Button className="w-full" type="button" onClick={handleAddToCart}>
-			Add to Cart
+		   <Plus /> <span>Add to Cart</span>
 		</Button>
 	);
 };
 
-export default AddToCard;
+export default AddToCart;

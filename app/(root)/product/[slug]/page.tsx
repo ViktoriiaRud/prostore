@@ -1,4 +1,4 @@
-import AddToCard from "@/components/shared/product/add-to-cart";
+import AddToCart from "@/components/shared/product/add-to-cart";
 import ProductImages from "@/components/shared/product/product-images";
 import ProductPrice from "@/components/shared/product/product-price";
 import { Badge } from "@/components/ui/badge";
@@ -60,7 +60,7 @@ const ProductDetailsPage = async (props: {
                             </div>
                             {product.stock > 0 && (
                                 <div className="flex-center">
-                                    <AddToCard item={{
+                                    <AddToCart item={{
                                         productId: product.id,
                                         name: product.name,
                                         slug: product.slug,
