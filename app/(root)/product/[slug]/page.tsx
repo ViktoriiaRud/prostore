@@ -18,7 +18,7 @@ const ProductDetailsPage = async (props: {
         <section>
             <div className="grid grid-cols-1 md:grid-cols-5">
               <ProductImages images={product.images}/>
-                <div className="col=span-2">
+                <div className="col span-2">
                     {/* {Images Component} */}
                 </div>
                 {/* {Details Column} */}
@@ -66,7 +66,7 @@ const ProductDetailsPage = async (props: {
                                         slug: product.slug,
                                         price: product.price,
                                         qty: 1,
-                                        images: product.images![0],
+                                        images: product.images?.[0] ?? "",
                                     }}/>
                                 </div>
                             )}
