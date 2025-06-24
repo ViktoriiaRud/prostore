@@ -143,7 +143,7 @@ export async function getMyCart() {
 	});
 }
 
-export async function removeItemCart(productId: string) {
+export async function removeItemFromCart(productId: string) {
 	try {
 		// Check for cart cookie
 		const sessionCartId = (await cookies()).get('sessionCartId')?.value;
