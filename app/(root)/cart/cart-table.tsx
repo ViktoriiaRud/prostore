@@ -2,7 +2,6 @@
 import { useToast } from '@/hooks/use-toast';
 import Image from 'next/image';
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import { useTransition } from "react";
 
 import { Button } from '@/components/ui/button';
@@ -13,7 +12,6 @@ import { Loader, Minus, Plus } from 'lucide-react';
 
 
 const CartTable = ({ cart }: { cart?: Cart }) => {
-    const router = useRouter();
     const { toast } = useToast();
     const [isPending, startTransition] = useTransition();
 
