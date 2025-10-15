@@ -1,6 +1,4 @@
 import { FlatCompat } from '@eslint/eslintrc';
-import eslintPluginTs from '@typescript-eslint/eslint-plugin';
-import parser from '@typescript-eslint/parser';
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
 
@@ -12,23 +10,12 @@ const compat = new FlatCompat({
 });
 
 export default [
-  ...compat.extends('next/core-web-vitals', 'next/typescript'),
+  ...compat.extends("next/core-web-vitals", "next/typescript"),
 
-  {
-    files: ['**/*.ts', '**/*.tsx'],
-    languageOptions: {
-      parser,
-      parserOptions: {
-        project: './tsconfig.json',
-      },
-    },
-    plugins: {
-      '@typescript-eslint': eslintPluginTs,
-    },
+  ...tseslint.config({
     rules: {
-      'no-unused-vars': 'off',
-      '@typescript-eslint/no-unused-vars': ['warn'],
+      "no-unused-vars": "off",
+      "@typescript-eslint/no-unused-vars": "error",
     },
-  },
+  }),
 ];
-

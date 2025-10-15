@@ -2,6 +2,7 @@
 import { useToast } from '@/hooks/use-toast';
 import Image from 'next/image';
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useTransition } from "react";
 
 import { Button } from '@/components/ui/button';
@@ -12,6 +13,7 @@ import { Loader, Minus, Plus } from 'lucide-react';
 
 
 const CartTable = ({ cart }: { cart?: Cart }) => {
+    const router = useRouter();
     const { toast } = useToast();
     const [isPending, startTransition] = useTransition();
 
@@ -37,7 +39,7 @@ const CartTable = ({ cart }: { cart?: Cart }) => {
                                 <TableRow key={item.slug}>
                                     <TableCell>
                                         <Link href={`/product/${item.slug}`} className='flex items-center'>
-                                            <Image src={item.images} alt={item.name} width={50} height={50} />
+                                            <Image src={item.image} alt={item.name} width={50} height={50} />
                                             <span className='px-2'>{item.name}</span>
                                         </Link>
                                     </TableCell>
@@ -86,5 +88,6 @@ const CartTable = ({ cart }: { cart?: Cart }) => {
         )}
     </>;
 }
+
 
 export default CartTable;

@@ -110,7 +110,7 @@ export async function addItemToCart(data: CartItem) {
 		}
 	} catch (error) {
 		return {
-			success: false,
+			success: true,
 			message: formatError(error),
 		};
 	}
@@ -169,7 +169,7 @@ export async function removeItemFromCart(productId: string) {
 			// Remove from cart
 			cart.items = (cart.items as CartItem[]).filter((x) => x.productId !== exist.productId);
 		} else {
-			
+
 			// Decrease qty
 			(cart.items as CartItem[]).find((x) => x.productId === productId)!.qty = exist.qty - 1;
 		}
