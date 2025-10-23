@@ -14,3 +14,11 @@ export const signUpDefaultValues = {
     password: '',
     confirmPassword: '',
 };
+
+export const shippingAddressDefaultValues = {
+fullName: 'John Doe',
+streetAddress:  '12 Main st',
+city: 'Austin',
+postalCode: '364749',
+country: 'USA',
+};
