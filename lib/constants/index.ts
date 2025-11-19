@@ -16,9 +16,10 @@ export const signUpDefaultValues = {
 };
 
 export const shippingAddressDefaultValues = {
-fullName: 'John Doe',
-streetAddress:  '12 Main st',
-city: 'Austin',
-postalCode: '364749',
-country: 'USA',
+fullName: '',
+streetAddress:  '',
+city: '',
+postalCode: '',
+country: '',
 };
+

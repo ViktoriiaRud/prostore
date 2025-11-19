@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 const ShippingAddressPage = async () => {
     const cart = await getMyCart();
 
-   if (!cart || !cart.items || cart.items.length === 0) {
+   if (!cart || cart.items.length === 0) {
   redirect('/cart');
 }
 

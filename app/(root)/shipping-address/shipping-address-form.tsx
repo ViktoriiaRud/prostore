@@ -6,12 +6,13 @@ import { useRouter } from "next/navigation";
 import { useTransition } from "react";
 
 import { zodResolver } from "@hookform/resolvers/zod";
-import { ControllerRenderProps, Form, useForm } from "react-hook-form";
+import { ControllerRenderProps, Form, SubmitHandler, useForm } from "react-hook-form";
 import { z } from 'zod';
 
 import { Button } from "@/components/ui/button";
 import { FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { updateUserAddress } from '@/lib/actions/user.actions';
 import { shippingAddressDefaultValues } from "@/lib/constants";
 import { shippingAddress } from "@/types";
 import { ArrowBigRight, Loader } from "lucide-react";
@@ -28,9 +29,21 @@ const ShippingAddressForm = ({ address }: {address: shippingAddress}) => {
 
   const [isPending, startTransition] = useTransition();
 
-  const onSubmit = () => {
-    return;
-  }
+  const onSubmit: SubmitHandler<z.infer<typeof shippingAddressSchema>> = async (values) => {
+     startTransition(async () => {
+       const res = await updateUserAddress(values);
+
+       if (!res.success) {
+             toast({
+        variant: 'destructive',
+        description: res.massage
+      });
+      return;
+       }
+      
+         router.push('/payment-method');
+     });
+  };
 
     return ( <>
            <div className="max-w-md mx-auto space-y-4">
