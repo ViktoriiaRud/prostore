@@ -16,15 +16,15 @@ export const signUpDefaultValues = {
 };
 
 export const shippingAddressDefaultValues = {
-fullName: '',
-streetAddress:  '',
-city: '',
-postalCode: '',
-country: '',
+fullName: 'Viki',
+streetAddress:  'Main 56 st',
+city: 'Lublin',
+postalCode: '780954',
+country: 'Poland',
 };
 
 export const PAYMENT_METHODS = process.env.PAYMENT_METHODS
   ? process.env.PAYMENT_METHODS.split(', ')
   : ['PayPal', 'Stripe', 'CashOnDelivery'];
 export const DEFAULT_PAYMENT_METHODS = 
-process.env.DEFAULT_PAYMENT_METHODS || 'PayPal';  
+process.env.DEFAULT_PAYMENT_METHODS || 'PayPal';
