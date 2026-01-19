@@ -2,7 +2,6 @@
 
 import { auth, signIn, signOut } from "@/auth";
 import { prisma } from "@/db/prisma";
-import { shippingAddress } from "@/types";
 import { hashSync } from "bcrypt-ts-edge";
 import { isRedirectError } from "next/dist/client/components/redirect-error";
 import z from "zod";
@@ -38,10 +37,10 @@ export async function signOutUser() {
 export async function signUpUser(prevState: unknown, formData: FormData) {
 	try {
 		const user = signUpFormSchema.parse({
-			name: formData.get("name"),
-			email: formData.get("email"),
-			password: formData.get("password"),
-			confirmPassword: formData.get("confirmPassword"),
+			name: formData.get(" "),
+			email: formData.get(" "),
+			password: formData.get(" "),
+			confirmPassword: formData.get(" "),
 		});
 
 		const plainPassword = user.password;
@@ -80,7 +79,7 @@ export async function getUserById(userId: string) {
 }
 
 //  Update the user's address
-export async function updateUserAddress(data: shippingAddress) {
+export async function updateUserAddress(data: z.infer<typeof shippingAddressSchema>) {
 	try {
 		const session = await auth();
 

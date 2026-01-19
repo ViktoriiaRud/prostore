@@ -1,4 +1,4 @@
-"user server";
+'use server';
 
 import { auth } from "@/auth";
 import { prisma } from "@/db/prisma";

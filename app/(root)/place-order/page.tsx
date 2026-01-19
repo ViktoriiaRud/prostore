@@ -2,16 +2,16 @@ import { auth } from "@/auth";
 import CheckoutSteps from "@/components/shared/checkout-steps";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { getMyCart } from "@/lib/actions/cart.actions";
 import { getUserById } from "@/lib/actions/user.actions";
 import { formatCurrency } from "@/lib/utils";
 import { ShippingAddress } from "@/types";
-import { Table } from "lucide-react";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { redirect } from "next/navigation";
+import PlaceOrderForm from "./place-order-form";
 
 export const metadata: Metadata = {
 	title: "Place Order",
@@ -67,7 +67,7 @@ const PlaceOrderPage = async () => {
 									{cart.items.map((item) => (
 										<TableRow key={item.slug}>
 											<TableCell>
-												<Link href={`/product/{item.slug}`} className="flex item-center">
+												<Link href={`/product/${item.slug}`} className="flex items-center">
 													<Image src={item.image} alt={item.name} width={50} height={50} />
 													<span className="px-2">{item.name}</span>
 												</Link>
@@ -75,7 +75,7 @@ const PlaceOrderPage = async () => {
 											<TableCell>
 												<span className="px-2">{item.qty}</span>
 											</TableCell>
-											<TableCell className="text-right">${item.price}</TableCell>
+											<TableCell className="text-right">{formatCurrency(item.price)}</TableCell>
 										</TableRow>
 									))}
 								</TableBody>
@@ -103,6 +103,7 @@ const PlaceOrderPage = async () => {
 								<div>Total</div>
 								<div>{formatCurrency(cart.totalPrice)}</div>
 							</div>
+							<PlaceOrderForm />
 						</CardContent>
 					</Card>
 				</div>

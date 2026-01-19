@@ -14,10 +14,10 @@ import { FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/comp
 import { Input } from "@/components/ui/input";
 import { updateUserAddress } from "@/lib/actions/user.actions";
 import { shippingAddressDefaultValues } from "@/lib/constants";
-import { shippingAddress } from "@/types";
+import { ShippingAddress } from "@/types";
 import { ArrowBigRight, Loader } from "lucide-react";
 
-const ShippingAddressForm = ({ address }: { address: shippingAddress }) => {
+const ShippingAddressForm = ({ address }: { address: ShippingAddress }) => {
 	const router = useRouter();
 	const { toast } = useToast();
 
