@@ -6,14 +6,13 @@ import { useRouter } from "next/navigation";
 import { useTransition } from "react";
 
 import { zodResolver } from "@hookform/resolvers/zod";
-import { ControllerRenderProps, Form, SubmitHandler, useForm } from "react-hook-form";
+import { ControllerRenderProps, SubmitHandler, useForm } from "react-hook-form";
 import { z } from "zod";
 
 import { Button } from "@/components/ui/button";
-import { FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { updateUserAddress } from "@/lib/actions/user.actions";
-import { shippingAddressDefaultValues } from "@/lib/constants";
 import { ShippingAddress } from "@/types";
 import { ArrowBigRight, Loader } from "lucide-react";
 
@@ -23,7 +22,7 @@ const ShippingAddressForm = ({ address }: { address: ShippingAddress }) => {
 
 	const form = useForm<z.infer<typeof shippingAddressSchema>>({
 		resolver: zodResolver(shippingAddressSchema),
-		defaultValues: address || shippingAddressDefaultValues,
+		defaultValues: address,
 	});
 
 	const [isPending, startTransition] = useTransition();
@@ -128,7 +127,9 @@ const ShippingAddressForm = ({ address }: { address: ShippingAddress }) => {
 						</div>
 						<div className="flex gap-2">
 							<Button type="submit" disabled={isPending}>
-								{isPending ? <Loader className="'w-4 h-4 animate-spin" /> : <ArrowBigRight className="w-4 h-4" />}
+								{isPending ?
+									<Loader className="'w-4 h-4 animate-spin" />
+								:	<ArrowBigRight className="w-4 h-4" />}
 								{""}
 								Continue
 							</Button>
